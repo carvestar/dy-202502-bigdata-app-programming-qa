@@ -8,3 +8,4 @@ import random
 scores = dict()
 for i in range(10, 50):
     scores['S' + str(i)] = random.randrange(50, 100)
+
