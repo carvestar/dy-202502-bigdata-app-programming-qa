@@ -5,6 +5,7 @@ your_book = [2002, '파이썬', 200, '1교시']
 
 #other_book = [your_book[0], your_book[1], your_book[2], your_book[3]]
 other_book = your_book[0:4]
+# other_book = your_book[:]
 
 print(my_book)
 print(your_book)
