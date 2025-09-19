@@ -16,6 +16,7 @@ avg = sum(scores.values()) / len(scores)
 print(avg)
 
 
-
+# 40명 중 최고 득점을 한 학생과 점수를 출력하시오.
+# 여러 명인 경우, 학번이 가장 빠른 한 명만 출력되도록 하시오.
 
 
