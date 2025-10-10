@@ -11,7 +11,7 @@ print(selected_df.head())
 
 kor_df = selected_df[selected_df['location'] == 'South Korea']
 print('='*50)
-print(kor_df)
+print(kor_df.head())
 
 #date컬럼을 index로 지정
 index_name = 'date'
