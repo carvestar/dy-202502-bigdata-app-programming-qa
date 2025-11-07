@@ -12,18 +12,25 @@ def get_data(filename):
     return df_raw['total_cases']
 #end-def
 
-#kor_sr = get_data('../ch05/data/covid_kor.csv')
-hi_sr = get_data('./hi_data.csv')
+# 2020-01-01 ~ 2020-12-31
+kor_sr = get_data('../ch05/data/covid_kor.csv')
+kor_index = kor_sr.index
 
-'''
-index_data = kor_data.index
+# 2020-03-01 ~ 2021-12-31
+hi_sr = get_data('./hi_data.csv')
+hi_index = hi_sr.index
+
+# -> 2020-01-01 ~ 2021-12-31
+data_index = kor_index.union(hi_index)
+
+rate = 20.13
+
 df = pd.DataFrame(
     {
-        '대한민국': kor_data,
-        '미국': usa_data,
+        '대한민국': kor_sr,
+        '하와이': hi_sr * rate,
     },
-    index=index_data
+    index=data_index
 )
 df.plot.line()
 plt.show()
-'''
