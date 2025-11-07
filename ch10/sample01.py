@@ -23,3 +23,25 @@ print('='*50)
 print(df_raw['date'].dt.year.unique())
 
 #df_raw에 2021년도 하와이 인구(population)를 대입(저장)!!!!
+hi_population = 1441553
+df_raw['population'] = hi_population
+
+print('='*50)
+print(df_raw.head())
+
+#원하는 데이터(날짜, 감염자수, 인구수)
+col_list = ['date', 'tot_cases', 'population']
+df_raw_filter = df_raw[col_list]
+
+print('='*50)
+print(df_raw_filter.head())
+
+df_raw_filter.set_index('date', inplace=True)
+
+print('='*50)
+print(df_raw_filter.head())
+
+
+#파일(csv)로 저장!!!!
+
+
