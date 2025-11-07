@@ -23,6 +23,7 @@ hi_index = hi_sr.index
 # -> 2020-01-01 ~ 2021-12-31
 data_index = kor_index.union(hi_index)
 
+#인구비율구하기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 rate = 20.13
 
 df = pd.DataFrame(
